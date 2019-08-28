@@ -1,0 +1,29 @@
+<h1 style="margin-top:10px">List Of Students</h1>
+<table class="table">
+   <thead class="thead-dark">
+      <tr>
+         <!-- <th scope="col"  (click)="sort('id')">ID</th> -->
+         <th scope="col" (click)="sort('date')">ID</th>
+         <th scope="col" (click)="sort('name')">NAME</th>
+         <th scope="col" (click)="sort('email')">EMAIL</th>
+         <th scope="col" (click)="sort('contact')">CONTACT</th>
+         <th scope="col" (click)="sort('city')">CITY</th>
+
+
+         <!-- <th scope="col">UPDATE</th> -->
+      </tr>
+   </thead>
+   <tr *ngFor="let std of students;let i = index">
+      <td>{{std.id}}</td>
+      <td>{{std.name}}</td>
+      <td>{{std.email}}</td>
+      <td>{{std.contact}}</td>
+      <td>{{std.city}}</td>
+      <td><button type="button" (click)="deleteStudent(i)" title="Delete Student">Delete Student
+      </button></td>
+   </tr>
+</table>
+
+
+<button type="button" (click)="addStudent()" title="Add Student">Add Student
+</button>
